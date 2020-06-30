@@ -14,6 +14,11 @@ input{
   border: none;
   border-bottom: 1px solid white;
   color: white;
+  width: 80%;
+}
+
+input:focus{
+  outline: none;
 }
 
 option{
@@ -36,8 +41,12 @@ button {
   cursor: pointer;
 }
 
+button:focus{
+  outline: none;
+}
+
 #main-container{
-    width: 50%;
+    width: 45%;
     margin: auto;
     border: 0.5px solid white;
     background-color: #343a40;
@@ -47,6 +56,7 @@ button {
 
 .heading{
     text-align: center;
+    font-family: sans-serif;
 }
 
 #form-input{
@@ -60,7 +70,7 @@ button {
     padding: 8px 0px 0px 10px;
 }
 #task{
-  width: 50%;
+  width: 98.5%;
 }
 #info{
     display: flex;
@@ -76,11 +86,15 @@ button {
 }
 
 #task-category{
+  width: 80%;
   margin: 5px;
   background-color: transparent;
   border: none;
   border-bottom: 1px solid white;
   color: white;
+}
+#task-category:focus{
+  outline: none;
 }
 
 #date{
@@ -138,10 +152,10 @@ button {
   flex-direction: row;
 }
 .desc-box{
-  width: 50%;
+  width: 80%;
 }
 .cat-box{
-  width: 50%;
+  width: 20%;
   text-align: center;
 }
 .container{
@@ -228,3 +242,5 @@ button {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+  
