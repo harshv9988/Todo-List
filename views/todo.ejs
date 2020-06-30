@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title><%= title %></title>
+    <script src="https://kit.fontawesome.com/749416ed71.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="main-container">
+        <h1 class="heading">TODO APP</h1>
+            <form action="/create-task" method="POST" id="add-task">
+                <div id="form-input">
+                    <div id="description">
+                        <label for="task">DESCRIPTION</label>
+                        <input type="text" id ="task" class = "input" name="description" placeholder="What do you want to do">
+                    </div>
+                    <div id="info">
+                        <div id="category">
+                            <label for="task-category">CHOOSE A CATEGORY</label>
+                            <select id="task-category" name="category">
+                                <option value="personal">Personal</option>
+                                <option value="work">Work</option>
+                                <option value="school">School</option>
+                                <option value="cleaning">Cleaning</option>
+                                <option value="other">Other</option>
+                              </select>
+                        </div>
+                        <div id="date">
+                            <label for="task-date">DUE DATE</label>
+                            <input type="date" id="task-date" class="input" name="date" placeholder="dd/mm/yyyy">
+                        </div>
+                    </div>
+                </div>
+            </form>
+                <div id="buttons">
+                    <div id="add-div">
+                        <button id="add" type="submit" form="add-task">ADD TASK</button>
+                    </div>
+                   <div id="delete-div">
+                    <button id="delete" type="submit" form="delete-task">DELETE</button>
+                   </div>
+                </div>
+        <form action="/delete-task" method="POST" id="delete-task">
+            <div id="list">
+                <ul>
+                    <%for(let i of task_list){%>
+                        <li>
+                        
+                            <div class="flex-box">
+                                    <div class="desc-box">
+                                        <label class="container">
+                                            <input type="checkbox" id="checkbox" name="<%=i._id%>">
+                                            <h2 class="desc-size"><%=i.description%></h2>
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                    <div class="cat-box">
+                                            <%if(i.category=="work"){%>
+                                                <h3 class="category-list" style="background-color:#007bff;">
+                                                    <span><%=i.category%></span>    
+                                                </h3>
+                                            <%}%>
+                                            <%if(i.category=="personal"){%>
+                                                <h3 class="category-list" style="background-color:#ffc107;">
+                                                    <span><%=i.category%></span>    
+                                                </h3>
+                                            <%}%>
+                                            <%if(i.category=="school"){%>
+                                                <h3 class="category-list" style="background-color:#17a2b8;">
+                                                    <span ><%=i.category%></span>   
+                                                </h3> 
+                                            <%}%>
+                                            <%if(i.category=="cleaning"){%>
+                                                <h3 class="category-list" style="background-color:#6c757d;">
+                                                    <span><%=i.category%></span>   
+                                                </h3> 
+                                            <%}%>
+                                            <%if(i.category=="other"){%>
+                                                <h3 class="category-list" style="background-color:#28a745;">
+                                                    <span><%=i.category%></span>   
+                                                </h3> 
+                                            <%}%>
+                                            
+                                    </div>
+                            </div>
+                            <h4 class="date-show">
+                                <i class="far fa-calendar-alt"></i>
+                                <%=i.date%>
+                            </h4>
+                        </li>
+                    <%}%>
+                </ul>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
