@@ -1,7 +1,14 @@
+@keyframes backgroundScroll {
+  from { background-position: 0 0; }
+	to { background-position: 100% 0; }
+}
+
 body{
-  /* background-color: #2d545e;
-  background-color: #1d1e22; */
-  background-image: linear-gradient(to right,#29323c,#485563);
+  /* background-image: linear-gradient(to right,#29323c,#485563); */
+    background-image: url('../images/pic2.jpg');
+    background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: backgroundScroll 20s linear infinite alternate;
 }
 
 label{
@@ -57,6 +64,7 @@ button:focus{
     background-color: #343a40;
     color: white;
     font-family: monospace;
+    margin-top: 50px;
 }
 
 .heading{
