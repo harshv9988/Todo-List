@@ -137,6 +137,10 @@ button:focus{                   /* Removing outlines from all button tags*/
   background-color: #f44336;
 }
 /*------------------------------------------------------------List to be printed--------------------------------------*/
+.hover-change:hover{
+  background-color: #51565c;
+}
+
 #list ul{
   padding: 0px;
   margin: 0px;
