@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <div id="main-container">
-        <h1 class="heading">TODO APP</h1>
+    <div id="main-container">   <!--The main container which consist of all elements of Todo list-->
+        <h1 class="heading">TODO APP</h1>       <!--Form Heading-->
             <form action="/create-task" method="POST" id="add-task">
                 <div id="form-input">
-                    <div id="description">
+                    <div id="description">      <!--Description div-->
                         <label for="task" class="mar-left">DESCRIPTION</label>
                         <input type="text" id ="task" class = "mar-left" class = "input" name="description" placeholder="What do you want to do" required>
                     </div>
                     <div id="info">
-                        <div id="category">
+                        <div id="category">     <!--Category checkbox-->
                             <label for="task-category">CHOOSE A CATEGORY</label>
                             <select id="task-category" name="category">
                                 <option value="none">Choose a category</option>
@@ -27,7 +27,7 @@
                                 <option value="Other">Other</option>
                               </select>
                         </div>
-                        <div id="date">
+                        <div id="date">             <!--Date field-->
                             <label for="task-date">DUE DATE</label>
                             <input type="date" id="task-date" class="input" name="date" placeholder="dd/mm/yyyy" required>
                         </div>
@@ -35,34 +35,34 @@
                 </div>
             </form>
                 <div id="buttons">
-                    <div id="add-div">
-                        <button id="add" type="submit" form="add-task">
+                    <div id="add-div">              <!--Butoon field-->
+                        <button id="add" type="submit" form="add-task">   <!--Add button-->
                             <i class="fas fa-plus"></i>
                             ADD TASK
                         </button>
                     </div>
                    <div id="delete-div">
-                    <button id="delete" type="submit" form="delete-task">
+                    <button id="delete" type="submit" form="delete-task">     <!--Delete button-->
                         <i class="fas fa-trash-alt"></i>
                         DELETE
                     </button>
                    </div>
                 </div>
-        <form action="/delete-task" method="POST" id="delete-task">
+        <form action="/delete-task" method="POST" id="delete-task">    <!--Form for checkbox-->
             <div id="list">
                 <ul>
-                    <%for(let i of task_list){%>
+                    <%for(let i of task_list){%>                   <!--Loop for printing tasks-->
                         <li>
                         
                             <div class="flex-box">
                                     <div class="desc-box">
                                         <label class="container">
                                             <input type="checkbox" id="checkbox" name="<%=i._id%>">
-                                            <h2 class="desc-size"><%=i.description%></h2>
+                                            <h2 class="desc-size"><%=i.description%></h2>       <!--Prints Description-->
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
-                                    <div class="cat-box">
+                                    <div class="cat-box">           <!--For printing categories-->
                                             <%if(i.category=="Work"){%>
                                                 <h3 class="category-list" style="background-color:#007bff;">
                                                     <span><%=i.category%></span>    
@@ -91,7 +91,7 @@
                                             
                                     </div>
                             </div>
-                            <h4 class="date-show">
+                            <h4 class="date-show">          <!--For printing Date-->
                                 <i class="far fa-calendar-alt"></i>
                                 <%=i.date%>
                             </h4>

@@ -1,11 +1,8 @@
-
+// import the file for saving data in database
 const Todo = require('../models/todo');
 
+//Render home page
 module.exports.todo = function(req,res){
-    // return res.render('todo',{
-    //     title:"Todo List",
-    //     task_list : taskList
-    // });
 
     Todo.find({},function(err,tasks){
         if(err){
@@ -19,10 +16,8 @@ module.exports.todo = function(req,res){
     })
 }
 
+//Adding task
 module.exports.add = function(req,res){
-    // console.log(req.body);
-    // taskList.push(req.body);
-    // return res.redirect('back');
     Todo.create({
         description:req.body.description,
         category:req.body.category,
@@ -36,7 +31,7 @@ module.exports.add = function(req,res){
         return res.redirect('back');
     });
 }
-
+//Deleting Task
 module.exports.delete = function(req,res){
     let id = req.body;
     console.log(id);

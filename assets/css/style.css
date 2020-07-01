@@ -1,3 +1,5 @@
+/*-------------------------------------------------------------Main elemets of HTML------------------------------------------------*/
+
 body{
     background-image: linear-gradient(to right,#29323c,#485563);
 
@@ -7,7 +9,7 @@ label{
     display: block;
 }
 
-.mar-left{
+.mar-left{         /* margin for elements inside description div*/
   margin-top: 6px;
   margin-left: 12px;
 }
@@ -21,7 +23,7 @@ input{
   width: 80%;
 }
 
-input:focus{
+input:focus{                 /* Removing outlines from all input tags*/
   outline: none;
 }
 
@@ -45,10 +47,10 @@ button {
   cursor: pointer;
 }
 
-button:focus{
+button:focus{                   /* Removing outlines from all button tags*/
   outline: none;
 }
-
+/*-----------------------------------------content of todo list----------------------------------------------------------------*/
 #main-container{
     width: 45%;
     margin: auto;
@@ -63,12 +65,12 @@ button:focus{
     text-align: center;
     font-family: sans-serif;
 }
-
+/*---------------------------------------------form of todo list-------------------------------------------------------------------*/
 #form-input{
     display: flex;
     flex-direction: column;
 }
-#description{
+#description{                    /* description text*/
     width: 100%;
     height: 70px;
     border: 0.5px solid white;
@@ -83,7 +85,7 @@ button:focus{
     width: 100%;
 }
 
-#category{
+#category{                         /* category options */
     width: 50%;
     border-right: 0.5px solid white;
     height: 70px;
@@ -102,27 +104,27 @@ button:focus{
   outline: none;
 }
 
-#date{
+#date{                                   /* Date option*/
     width: 50%;
     border: 0.5px solid black;
     height: 70px;
     padding: 8px 0px 0px 10px;
 }
 
-
+/*-------------------------------------------------button section-------------------------------------------------------------------*/
 #buttons{
     height: 100px;
     border: 0.5px solid white;
     display: flex;
     flex-direction: row;
 }
-#add-div{
+#add-div{            /* contain add button*/
   width: 50%;
   text-align: right;
   padding: 25px 45px 0px 0px;
 }
 
-#delete-div{
+#delete-div{           /* contain delete button*/
   width: 50%;
   text-align: left;
   padding-top: 25px;
@@ -134,7 +136,7 @@ button:focus{
 #delete{
   background-color: #f44336;
 }
-
+/*------------------------------------------------------------List to be printed--------------------------------------*/
 #list ul{
   padding: 0px;
   margin: 0px;
@@ -147,7 +149,7 @@ button:focus{
     border-bottom: 0.5px solid white;
 }
 
-.date-show{
+.date-show{                       /*  date box */
   margin: -6px 0px 15px 27px;
   opacity: 0.6;
 }
@@ -156,10 +158,10 @@ button:focus{
   display: flex;
   flex-direction: row;
 }
-.desc-box{
+.desc-box{                         /* contain description*/
   width: 80%;
 }
-.cat-box{
+.cat-box{                        /* contain category option */
   width: 20%;
   text-align: center;
   margin-top: 8px;
@@ -182,7 +184,7 @@ button:focus{
   font-size: 0.9rem;
 }
 
-/* custom checkbox--------------------------------------------------------------------------*/
+/*--------------------------------------- custom checkbox--------------------------------------------------------------------------*/
 .container {
     display: block;
     position: relative;
@@ -250,7 +252,7 @@ button:focus{
     transform: rotate(45deg);
   }
 
-  /*-----------------background color change for form--------------------*/
+  /*-----------------background color change for form-------------------------------------------------------*/
 
   #description:focus-within{
     background-color: #51565c;
@@ -264,7 +266,7 @@ button:focus{
     background-color: #51565c;
   }
 
-/*----------------------media queries-------------------------*/
+/*----------------------media queries-------------------------------------------------------------*/
 
 @media screen and (max-width:900px){
  
