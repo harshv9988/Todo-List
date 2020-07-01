@@ -248,4 +248,17 @@ button:focus{
     transform: rotate(45deg);
   }
 
-  
+  /*-----------------background color change for form--------------------*/
+
+  #description:focus-within{
+    background-color: #51565c;
+  }
+
+  #category:focus-within{
+    background-color: #51565c;
+  }
+
+  #date:focus-within{
+    background-color: #51565c;
+  }
+
