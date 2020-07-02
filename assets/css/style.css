@@ -1,7 +1,10 @@
 /*-------------------------------------------------------------Main elemets of HTML------------------------------------------------*/
 
 body{
-    background-image: linear-gradient(to right,#29323c,#485563);
+    /* background-image: linear-gradient(to right,#29323c,#485563); */
+    background-image: url('../images/pic2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
 
 }
 
