@@ -298,7 +298,7 @@ button:focus{                   /* Removing outlines from all button tags*/
     width: 87px;
   }
   .category-list{
-    width: 50px;
+    width: 50px; /*increasing width for small screens*/
     height: 30px;
     margin-right: 30px;
   }
