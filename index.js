@@ -5,7 +5,7 @@ const express = require('express');
 const app  = express();
 
 //define port
-const port = 8000;
+const port = process.env.PORT || 8000;
 
 //import connection file for mongoose
 const db = require('./config/mongoose');

@@ -2,7 +2,9 @@
 const mongoose = require('mongoose');
 
 // make connection
-mongoose.connect('mongodb://localhost/todo_list_db');
+//mongoose.connect('mongodb://localhost/todo_list_db');
+
+mongoose.connect('mongodb+srv://mongoUser:mongoUser@cluster0.qyh17.mongodb.net/todolist?retryWrites=true&w=majority');
 
 // making variable for checking connection
 const db = mongoose.connection;
